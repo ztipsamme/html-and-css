@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rosemary Garden erbjuder exaptionell Trädgårdsdesign- och rådgivning.">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Rosemary Garden - En fiktiv trädgårdsdesigner som erbjuder trädgårdsrådgivning. En sida skapad som första
+    projekt av en förstaårselev på programmet front-end utvecklare på IT Högskolan i Göteborg</title>
+</head>
+
+<body>
+  <nav class="grid hover-animation" id="navbar">
+    <a href="index.html" id="logo">Rosemary<br>Garden</a>
+    <ul id="menu">
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="#om">Om mig</a></li>
+      <li><a href="boka-mote.html" id="book-meeting">Boka möte</a></li>
+      <!-- font awesome accessibility flr iconer, https://fontawesome.com/docs/web/dig-deeper/accessibility -->
+    </ul>
+    <ul class="social-icons" aria-label="Sociala länkar">
+      <li><a href="https://www.youtube.com/" target="_blank"><span class="fa fa-youtube-play fa-fw"
+            title="youtube.com"><span class="sr-only">YouTube</span></span></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><span class="fa fa-instagram fa-fw"
+            title="instagram.com"><span class="sr-only">Instagram</span></span></a>
+      </li>
+      <li><a href="https://www.facebook.com/" target="_blank"><span class="fa fa-facebook-f fa-fw"
+            title="facebook.com"><span class="sr-only">Facebook</span></span></a></li>
+    </ul>
+    <!-- hide menu on scroll
+    källa:
+    W3Schools, "How TO - Hide Menu on Scroll", https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp. -->
+    <!-- <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-70px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".navbar-fixed-top");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script> -->
+  </nav>
+
+  <header class="grid" id="hero">
+    <!-- Font awsome har en inbyggd class för sr-only, men jag har även en egen. Denna h1:a är gömd för seende, men läses av SR. -->
+    <h1 class="sr-only">Hem</h1>
+    <picture class="circle">
+      <source media="(min-width:1920px)" srcset="images/rosemary_5760x3840.jpg">
+      <source media="(min-width:1280px)" srcset="images/rosemary_1920x1280.jpg">
+      <source media="(min-width:640px)" srcset="images/rosemary_1280x853.jpg">
+      <img src="images/rosemary_640x426.jpg"
+        alt="Rosemary sittandes på huk bland rosa och röda pelargoner håller även i en kruka med röda pelargoner." />
+    </picture>
+    <div>
+      <h2>Från trädgårdsdröm till verklighet</h2>
+      <p class="subheading">Personliga trädgårdar anpassade för era behov, drömmar och önskemål.</p>
+      <a href="boka-mote.html" class="button" aria-hidden="true">Boka trädgårdsrådgivning</a>
+      <a href="index.html#portfolio" class="button ghost-btn" id="#portfolio" aria-hidden="true">Se tidigare projekt</a>
+    </div>
+  </header>
+
+  <section aria-label="Tidigare project" class="portfolio grid" id="portfolio">
+    <h3>Tidigare projekt</h3>
+
+    <a href="#" class="card" aria-label="Projekt, Fransk trädgård">
+      <picture>
+        <source media="(min-width:1920px)" srcset="images/fransk_tradgard_6748x4610.jpg">
+        <source media="(min-width:1280px)" srcset="images/fransk_tradgard_1920x1311.jpg">
+        <source media="(min-width:640px)" srcset="images/fransk_tradgard_1280x874.jpg">
+        <img src="images/fransk_tradgard_640x437.jpg"
+          alt="En fransk trädgård med geometriska buskar placerade utanför entrén på ett grandiöst äldre hus.">
+      </picture>
+      <div class="overlay">
+        <h4>Fransk trädgård</h4>
+      </div>
+    </a>
+
+
+    <a href="#" class="card" aria-label="Projekt, Orangeri">
+      <picture>
+        <source media="(min-width:1920px)" srcset="images/orangeri_6240x4160.jpg">
+        <source media="(min-width:1280px)" srcset="images/orangeri_1920x1280.jpg">
+        <source media="(min-width:640px)" srcset="images/orangeri_1280x856.jpg">
+        <img src="images/orangeri_640x426.jpg"
+          alt="Litet orangeri placerat på en upphöjning bland en vildvuxen rabatt.">
+      </picture>
+      <div class="overlay">
+        <h4>Orangeri</h4>
+      </div>
+    </a>
+
+
+    <a href="#" class="card" aria-label="Project, Japansk trädgård">
+      <picture>
+        <source media="(min-width:1920px)" srcset="images/japansk_tradgard_6046x4035.jpg">
+        <source media="(min-width:1280px)" srcset="images/japansk_tradgard_1920x1281.jpg">
+        <source media="(min-width:640px)" srcset="images/japansk_tradgard_1280x854.jpg">
+        <img src="images/japansk_tradgard_640x427.jpg"
+          alt="Litet asiatiskt hus med utsikt över en liten damm med näckrosor omringad av vacker växtlighet.">
+      </picture>
+      <div class="overlay">
+        <h4>Japansk trädgård</h4>
+      </div>
+    </a>
+
+  </section>
+
+  <section aria-label="Kundrecentioner" class="social-proof grid">
+    <h3>Kundrecentioner</h3>
+    <div class="card">
+      <div class="circle">
+        <img src="images/margarit_ek.jpg"
+          alt="Profilbild för kunden Margarit Ek bärandes en stråhatt och bruna hängslebyxor.">
+      </div>
+      <cite>“Spenderar numera mer tid utomhus i min vackra trädgård än i mitt dyra hus”</cite>
+      <p>Margarit Ek</p>
+    </div>
+    <div class="card">
+      <div class="circle"><img src="images/tim-jan_kronbald.jpg"
+          alt="Profilbild för kunden Tim-jan Kronblad i hatt och en röd skarf runt halsen.">
+      </div>
+      <cite>“Fantastisk design. Otroligt öga för detaljer”</cite>
+      <p>Tim-jan Kronblad</p>
+    </div>
+    <div class="card">
+      <div class="circle"><img src="images/jasmine_syren.jpg"
+          alt="Profilbild för kunden Jasmine Syrén hållandes i en kruka med en nerklippt rosbuske."></div>
+      <cite>“Är så nöjd med mitt orangeri. Nu kan jag med stil njuta av solen året om.”</cite>
+      <p>Jasmine Syrén</p>
+    </div>
+  </section>
+
+  <section aria-label="Skapa den oas du alltid drömt om" class="packages grid">
+    <h3>Skapa den oas du alltid drömt om</h3>
+    <p class="subheading">Det är alltid lättare att göra drömmen till verklighet om man visualiserar, överväger alla
+      alternativ och lägger upp en god plan. Vi hjälper dig med just detta.</p>
+    <!-- Inspo för text nedan från https://www.cattisocheira.se/prislista.html -->
+    <div class="card">
+      <h4>Ritning & design</h4>
+      <h5>I detta paket ingår:</h5>
+      <ol>
+        <li>Konsultation</li>
+        <li>Digital ritning i skala 1:100</li>
+        <li>Möte för eventuell alterering av ritningen</li>
+        <li>Någon av följande design- och formritnings alternativ:
+          <ul>
+            <li>Ritning utan namngivna växter</li>
+            <li>Ritning med namngiva växter</li>
+            <li>Ritning med komplett växtlista (antal, latinska namn, skötsel m.m)</li>
+          </ul>
+        </li>
+      </ol>
+      <a href="boka-mote.html" class="button" aria-label="Boka möte för ritning och design">Boka
+        möte</a>
+    </div>
+    <div class="card">
+      <h4>Konsultation</h4>
+      <p>Passar dig som redan har en uppvuxen trädgård.</p>
+      <h5>I detta paket ingår:</h5>
+      <ol>
+        <li>Besök av oss till din trädgård</li>
+        <li>Rådgivning kring skötsel, växtförslag för ytan, lösningsalternativ för t.ex. mindre blåst eller insyn</li>
+        <li>Enklare handritad skiss</li>
+      </ol>
+      <p class="price">Grundavgift 500kr + 1000kr per timma</p>
+      <a href="boka-mote.html" class="button" aria-label="Boka möte för konsultation">Boka möte</a>
+    </div>
+    <div class="card">
+      <h4>Idévisualisering</h4>
+      <p>För mindre punkt ytor så som t.ex en uteplats, köksträdgård, entré, uppfart eller köksträdgård när du behöver
+        inspiration.</p>
+      <h5>I detta paket ingår:</h5>
+      <ol>
+        <li>Digital konsultation</li>
+        <li>Digital prototyp i from av bild utan mått</li>
+        <li>Lista över ikluderad växtlighet. Antal anges ej. </li>
+      </ol>
+      <a href="boka-mote.html" class="button" aria-label="Boka möte för idévisualisering">Boka möte</a>
+    </div>
+  </section>
+
+  <footer class="page-footer grid hover-animation">
+    <div id="om">
+      <h3>Om</h3>
+      <p>Rosemary Garden är en fiktiv trädgårdsdesigner med stor talang. Ha därmed i åtanke vid besök av denna
+        webbplasen att den ej är för en
+        verklig juridisk person eller företag. Denna sida skapades av en förstaårselev på <a
+          href="https://www.iths.se/">ITHS i Göteborg</a> som första project på programmet för blivande front-end
+        utvecklare. Vill ni kontakta denna elev? Vänligen klicka er vidare till hennes LinkedIn profil här i sidforten.
+        Hoppas att ni finner nöje i ert besök.</p>
+    </div>
+    <ul class="social-icons" aria-label="Sociala länkar">
+      <li><a href="https://www.youtube.com/" target="_blank"><span class="fa fa-youtube-play fa-fw"
+            title="youtube.com"><span class="sr-only">YouTube</span></span></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><span class="fa fa-instagram fa-fw"
+            title="instagram.com"><span class="sr-only">Instagram</span></span></a>
+      </li>
+      <li><a href="https://www.facebook.com/" target="_blank"><span class="fa fa-facebook-f fa-fw"
+            title="facebook.com"><span class="sr-only">Facebook</span></span></a></li>
+      <li><a href="https://se.linkedin.com/in/emma-s-850732216?trk=people-guest_people_search-card"
+          target="_blank"><span class="fa fa-linkedin" title="linkedin.com"><span
+              class="sr-only">LinkedIn</span></span></a>
+      </li>
+    </ul>
+    <p>Copyright &copy; 2022</p>
+  </footer>
+</body>
+
+</html>

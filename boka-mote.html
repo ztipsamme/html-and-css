@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Rosemary Garden erbjuder exaptionell Trädgårdsdesign- och rådgivning. Boka ett möte redan idag.">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Rosemary Garden - En fiktiv trädgårdsdesigner. Boka en låtsas trädgårdsdesign och/ eller trädgårdsrådgivning
+    idag. En sida skapad som första
+    projekt av en förstaårselev på programmet front-end utvecklare på IT Högskolan i Göteborg
+  </title>
+</head>
+
+<body class="booking-page">
+  <nav class="grid hover-animation" id="navbar">
+    <a href="index.html" id="logo">Rosemary<br>Garden</a>
+    <ul id="menu">
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="#om">Om mig</a></li>
+      <li><a href="boka-mote.html" id="book-meeting">Boka möte</a></li>
+      <!-- font awesome accessibility flr iconer, https://fontawesome.com/docs/web/dig-deeper/accessibility -->
+    </ul>
+    <ul class="social-icons" aria-label="Sociala länkar">
+      <li><a href="https://www.youtube.com/" target="_blank"><span class="fa fa-youtube-play fa-fw"
+            title="youtube.com"><span class="sr-only">YouTube</span></span></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><span class="fa fa-instagram fa-fw"
+            title="instagram.com"><span class="sr-only">Instagram</span></span></a>
+      </li>
+      <li><a href="https://www.facebook.com/" target="_blank"><span class="fa fa-facebook-f fa-fw"
+            title="facebook.com"><span class="sr-only">Facebook</span></span></a></li>
+    </ul>
+    <!-- hide menu on scroll
+    källa:
+    W3Schools, "How TO - Hide Menu on Scroll", https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp. -->
+    <!-- <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-70px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".navbar-fixed-top");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script> -->
+  </nav>
+  <section class="booking packages grid" aria-label="Boka ditt möte">
+    <!-- Font awsome har en inbyggd class för sr-only, men jag har även en egen. Denna h1:a är gömd för seende, men läses av SR. Detta för att sidans huvudrubrik ska matcha namnet på länken i nav:en. -->
+    <h1 class="sr-only">Boka möte</h1>
+    <h2>Boka ditt möte</h2>
+    <p class="subheading">Det är alltid lättare att göra drömmen till verklighet om man visualiserar, överväger alla
+      alternativ och lägger upp en god plan. Vi hjälper dig med just detta.</p>
+    <!-- Inspo för text nedan från https://www.cattisocheira.se/prisspansta.html -->
+    <form>
+      <fieldset class="grid">
+        <legend>
+          <h3>Välj ett av våra paket</h3>
+          <!--
+                radio buttons källa:
+                Daniell Romo, "Radio button cards", https://codepen.io/dromo77/pen/ZEQWyaZ.
+                Sara, "Radio Buttons as Cards", https://codepen.io/sc78/pen/WNQNjgz.
+              -->
+        </legend>
+        <label>
+          <input name="plan" type="radio" checked>
+          <span class="card">
+            <span class="h4">Ritning & design</span>
+            <span class="h5">I detta paket ingår:</span>
+            <span class="list">
+              <span>Konsultation.</span>
+              <span>Digital ritning i skala 1:100.</span>
+              <span>Möte för eventuell alterering av ritningen.</span>
+              <span>Någon av följande design- och formritnings alternativ:
+                <span>Ritning utan namngivna växter.</span>
+                <span>Ritning med namngivna växter.</span>
+                <span>Ritning med komplett växtlista (antal, latinska namn, skötsel m.m.)</span>
+              </span>
+            </span>
+          </span>
+        </label>
+        <label>
+          <input name="plan" type="radio">
+          <span class="card">
+            <span class="h4">Konsultation</span>
+            <span>Passar dig som redan har en uppvuxen trädgård.</span>
+            <span class="h5">I detta paket ingår:</span>
+            <span class="list">
+              <span>Besök av oss till din trädgård.</span>
+              <span>Rådgivning kring skötsel, växtförslag för ytan, lösningsalternativ för t.ex. mindre blåst eller
+                insyn.
+              </span>
+              <span>Enklare handritad skiss.</span>
+              <span>Grundavgift 500kr + 1000kr per timma.</span>
+            </span>
+          </span>
+        </label>
+        <label>
+          <input name="plan" type="radio">
+          <span class="card">
+            <span class="h4">Idévisualisering</span>
+            <span>För mindre punkt ytor så som t.ex en uteplats, köksträdgård, entré eller uppfart när du
+              behöver
+              inspiration.</span>
+            <span class="h5">I detta paket ingår:</span>
+            <span class="list">
+              <span>Digital konsultation.</span>
+              <span>Digital prototyp i form av bild utan mått.</span>
+              <span>Lista över ikluderad växtlighet. Antal anges ej.</span>
+            </span>
+          </span>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          <h3>Hur kan vi hjälpa dig med just detta? Vad önskas?</h3>
+        </legend>
+        <label>
+          Meddelande
+          <textarea name="message" placeholder="Skriv ditt meddelande här." required></textarea>
+        </label>
+      </fieldset>
+
+      <fieldset class="grid">
+        <legend>
+          <h3>Kontaktinformation</h3>
+        </legend>
+        <label>
+          Förnamn
+          <input type="text" name="first-name" placeholder="Förnamn" required>
+        </label>
+        <label>
+          Efternamn
+          <input type="text" name="surname" placeholder="Efternamn" required>
+        </label>
+        <label>
+          E-post
+          <input type="email" name="e-mail" placeholder="E-post" required>
+        </label>
+        <label>
+          Telefonnummer
+          <input type="tel" name="phone-number" placeholder="Telefonnummer" required>
+        </label>
+        <label>
+          Gata
+          <input type="text" name="adress" placeholder="Gata" required>
+        </label>
+        <label>
+          Postnummer
+          <input type="text" name="adress" maxlength="5" placeholder="Postnummer" required>
+        </label>
+        <label>
+          Ort
+          <input type="text" name="adress" placeholder="Stad" required>
+        </label>
+        <label>
+          Land
+          <input type="text" name="adress" placeholder="Land" required>
+        </label>
+      </fieldset>
+      <input class="button" type="submit" value="Boka och skicka meddelande">
+    </form>
+  </section>
+
+  <footer class="page-footer grid hover-animation">
+    <div id="om">
+      <h3>Om</h3>
+      <p>Rosemary Garden är en fiktiv trädgårdsdesigner med stor talang. Ha därmed i åtanke vid besök av denna
+        webbplasen att den ej är för en
+        verklig juridisk person eller företag. Denna sida skapades av en förstaårselev på <a
+          href="https://www.iths.se/">ITHS i Göteborg</a> som första project på programmet för blivande front-end
+        utvecklare. Vill ni kontakta denna elev? Vänligen klicka er vidare till hennes LinkedIn profil här i sidforten.
+        Hoppas att ni finner nöje i ert besök.</p>
+    </div>
+    <ul class="social-icons" aria-label="Sociala länkar">
+      <li><a href="https://www.youtube.com/" target="_blank"><span class="fa fa-youtube-play fa-fw"
+            title="youtube.com"><span class="sr-only">YouTube</span></span></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><span class="fa fa-instagram fa-fw"
+            title="instagram.com"><span class="sr-only">Instagram</span></span></a>
+      </li>
+      <li><a href="https://www.facebook.com/" target="_blank"><span class="fa fa-facebook-f fa-fw"
+            title="facebook.com"><span class="sr-only">Facebook</span></span></a></li>
+      <li><a href="https://se.linkedin.com/in/emma-s-850732216?trk=people-guest_people_search-card"
+          target="_blank"><span class="fa fa-linkedin" title="linkedin.com"><span
+              class="sr-only">LinkedIn</span></span></a>
+      </li>
+    </ul>
+    <p>Copyright &copy; 2022</p>
+  </footer>
+</body>
+
+</html>
